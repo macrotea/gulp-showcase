@@ -1,32 +1,66 @@
+/*
+代码混淆： gulp-uglify
+sass编译： gulp-sass
+js代码连接： gulp-concat
+js代码检查： gulp-jshint
+图片压缩： gulp-imagemin
+*/
+
 var gulp = require("gulp"),
     uglify = require("gulp-uglify"),
-    sass = require("gulp-ruby-sass")
-;
+    concat = require('gulp-concat'),
+    imagemin = require('gulp-imagemin'),
+    jshint = require('gulp-jshint');
+    sass = require('gulp-sass');
 
-//cmd: gulp compress-lib-1
-gulp.task('compress-lib-1', function () {
-    gulp.src('js/lib-1/*.js')
+var paths = {
+    scripts:['assets/js/*.js'],
+    sass:['assets/sass/*.scss'],
+    css:['assets/css/*.css'],
+    images:['assets/img/*']
+}
+
+gulp.task('scripts', function () {
+    gulp.src(paths.scripts)
     .pipe(uglify())
-    .pipe(gulp.dest('dist/lib-1'))
+    .pipe(concat('all.min.js'))
+    .pipe(gulp.dest('dist/js'))
 });
 
-//cmd: gulp compress-lib-1
-//不知道为啥跑不起来，迟点再解决
-gulp.task('styles', function () {
-    gulp.src('sass/sc1/*.scss')
-    .on('error', function (err) {
-        console.log(err.message);
-    })
-    .pipe(sass())
-    .pipe(gulp.dest('dist/css/sc1'));
+gulp.task('lint', function () {
+    gulp.src(paths.scripts)
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
+});
+
+gulp.task('css', function () {
+});
+
+gulp.task('images', function () {
+    gulp.src(paths.images)
+    .pipe(imagemin({optimizationLevel: 5}))
+    .pipe(gulp.dest('dist/img'));
+});
+
+gulp.task('sass', function () {
+    gulp.src(paths.sass)
+    .pipe(sass({
+        onSuccess:function(){
+            errLogToConsole: true,
+            console.log("sass success");
+        }
+    }))
+    //.pipe(uglify())
+    .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('watch', function () {
-    gulp.watch('js/lib-1/*.js',["compress-lib-1"]);
+    gulp.watch(paths.scripts, ['scripts','lint']);
+    gulp.watch(paths.css, ['css']);
+    gulp.watch(paths.sass, ['sass']);
+    gulp.watch(paths.images, ['images']);
 });
 
-gulp.task("default",["compress-lib-1", "watch"]);
-
-//gulp.task("default",function(){
-//    console.log("the default task is running!");
-//});
+gulp.task("default", ["scripts", "lint",'css', 'sass', 'images'], function () {
+    console.log("the default task is finish!");
+});
