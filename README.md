@@ -11,6 +11,7 @@
 - 查看gulp版本：gulp -version
 - 编写gulp配置文件：gulpfile.js
 - 运行gulp任务：gulp [任务名称]
+- Chrome安装livereload扩展，同时通过nodejs运行当前项目: npm app.js,当修改js，css，html则被watch同时也reload
 
 ## 联系我 ##
 

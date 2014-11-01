@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>测试</title>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/css/main.css">
+
+    <script src="dist/js/all.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!--// NOTICE macrotea 2014-11-01 08:01:45 添加 livereload 脚本-->
+    <script src="http://localhost:35729/livereload.js?snipver=1"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            $("#user").html(window.who.getInfo());
+        });
+    </script>
+</head>
+<body>
+	<div id="box" class="box panel">
+		测试
+	</div>
+	<div id="user" class="panel">
+	</div>
+</body>
+</html>

@@ -1,17 +1,19 @@
 /**
  * 类定义
  */
-(function(){
-    var name = "macrotea";
+(function(window){
+    var me = "macroteadd";
+
     /**
-     * 人
-     * @type {{age: number, showInfo: Function}}
+     * 定义人
+     * @type {{age: number, name: string, getInfo: Function}}
      */
     var person = {
         age:123,
-        showInfo:function(){
-            console.log(this.age + name);
+        name:me,
+        getInfo:function(){
+            return this.age + this.name;
         }
     };
-    person.showInfo();
-})();
+    window.who = person;
+})(window);
