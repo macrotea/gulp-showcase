@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>基于Bootstrap3的Web模板 - 管理</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--fav-->
+    <link rel="shortcut icon" href="resources/images/app/fav.ico" type="image/x-icon">
+    <link rel="icon" href="resources/images/app/fav.ico" type="image/x-icon">
+
+    <!--css-->
+    <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/app/index.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                Template
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="login.html">登录页面</a></li>
+                <li><a href="single.html">单独页面</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">下拉列表 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="关键字...">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" data-toggle="modal" data-target="#aboutModal">关于</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Macrotea <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">个人信息</a></li>
+                        <li><a href="#">我的主页</a></li>
+                        <li><a href="#">我的消息</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-2">
+
+            <ul id="slideBarNav" class="nav nav-tabs nav-justified" role="tablist">
+                <li class="active"><a href="#common" role="tab" data-toggle="tab">常用</a></li>
+                <li class=""><a href="#basic" role="tab" data-toggle="tab">基本</a></li>
+                <li class="dropdown">
+                    <a href="#" id="slideBarNavDropdown" class="dropdown-toggle" data-toggle="dropdown">设置 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="slideBarNavDropdown">
+                        <li class=""><a href="#expandTabPane" tabindex="-1" role="tab" data-toggle="tab">展开</a></li>
+                        <li class=""><a href="#syncTabPane" tabindex="-1" role="tab" data-toggle="tab">同步</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!--ul#slideBarNav-->
+
+            <div id="slideBarNavContent" class="tab-content">
+                <div class="tab-pane fade in active" id="common">
+                    <p>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item active">
+                                文章管理
+                            </a>
+                            <a href="#" class="list-group-item">新增</a>
+                            <a href="#" class="list-group-item">列表</a>
+                            <a href="#" class="list-group-item">统计</a>
+                        </div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item active">
+                                留言管理
+                            </a>
+                            <a href="#" class="list-group-item">新增</a>
+                            <a href="#" class="list-group-item">列表</a>
+                            <a href="#" class="list-group-item">统计</a>
+                        </div>
+                    </p>
+                </div>
+                <div class="tab-pane fade" id="basic">
+                    <p>
+                        <div class="well">
+                            <p>
+                                基本面板
+                            </p>
+                        </div>
+                    </p>
+                </div>
+                <div class="tab-pane fade" id="expandTabPane">
+                    <p>
+                        <div class="well">
+                            <p>
+                                展开面板
+                            </p>
+                        </div>
+                    </p>
+                </div>
+                <div class="tab-pane fade" id="syncTabPane">
+                    <p>
+                        <div class="well">
+                            <p>
+                                同步面板
+                            </p>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <!--div#slideBarNavContent-->
+        </div>
+        <!--div.col-md-2-->
+
+        <div class="col-md-10">
+
+            <ol class="breadcrumb">
+                <li><a href="#">文章管理</a></li>
+                <li class="active">文章列表</li>
+            </ol>
+
+            <div class="alert alert-success" role="alert">数据查询成功</div>
+
+            <div class="panel panel-default">
+
+                <div class="panel-body">
+                    <p>
+                        <div class="row">
+                            <div class="col-md-10">
+                                <form class="form-inline" role="form">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="username">用户名</label>
+                                        <input type="email" class="form-control" id="username" placeholder="用户名" value="" AUTOCOMPLETE="off"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="email">邮箱</label>
+                                        <input type="email" class="form-control" id="email" placeholder="邮箱" value="" AUTOCOMPLETE="off"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="email">部门</label>
+                                        <select class="form-control">
+                                            <option>开发部</option>
+                                            <option>财务部</option>
+                                            <option>行政部</option>
+                                        </select>
+                                    </div>
+                                    &nbsp;
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> 启用
+                                        </label>
+                                    </div>
+                                    &nbsp;
+                                    <button type="submit" class="btn btn-primary">查询</button>
+                                    <a href="#" class="btn btn-default">新增</a>
+
+                                </form>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="btn-group">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default dropdown-toggle btn-info" data-toggle="dropdown">
+                                            分享
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">新浪微博</a></li>
+                                            <li><a href="#">朋友圈</a></li>
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="btn btn-default">导出</button>
+                                    <button type="button" class="btn btn-default">打印</button>
+                                </div>
+                            </div>
+                        </div>
+                    </p>
+                </div>
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th class="tableSelectColumn">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-info btn-xs">全选</button>
+                                    <button type="button" class="btn btn-info dropdown-toggle btn-xs" data-toggle="dropdown">
+                                        <span class="caret"></span>
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">反向选中</a></li>
+                                        <li><a href="#">删除选中</a></li>
+                                        <li><a href="#">启用选中</a></li>
+                                        <li><a href="#">禁用选中</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">高亮选中</a></li>
+                                    </ul>
+                                </div>
+                            </th>
+                            <th>编号</th>
+                            <th>用户名</th>
+                            <th>真实姓名</th>
+                            <th>年龄</th>
+                            <th>邮箱</th>
+                            <th>性别</th>
+                            <th class="tableOperateColumn">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="tableRecordSelected"></td>
+                        <td><span class="badge">1</span></td>
+                        <td>Mark</td>
+                        <td>Mark</td>
+                        <td>张三</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>
+                            <div class="btn-group btn-group-sm">
+                                <button type="button" class="btn btn-default"><a href="#">编辑</a></button>
+                                <button type="button" class="btn btn-default"><a href="#">删除</a></button>
+                                <div class="btn-group btn-group-sm"> <button type="button" class="btn btn-default dropdown-toggle btn-info" data-toggle="dropdown"> 更多 <span class="caret"></span> </button>
+                                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                        <li><a href="#">启用</a></li>
+                                        <li><a href="#">禁用</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="tableRecordSelected"></td>
+                        <td><span class="badge">2</span></td>
+                        <td>Jacob</td>
+                        <td>Mark</td>
+                        <td>张三</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>
+                            <div class="btn-group btn-group-sm">
+                                <button type="button" class="btn btn-default"><a href="#">编辑</a></button>
+                                <button type="button" class="btn btn-default"><a href="#">删除</a></button>
+                                <div class="btn-group btn-group-sm">
+                                    <button type="button" class="btn btn-default dropdown-toggle btn-info" data-toggle="dropdown"> 更多 <span class="caret"></span></button>
+                                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                        <li><a href="#">启用</a></li>
+                                        <li><a href="#">禁用</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="tableRecordSelected"></td>
+                        <td><span class="badge">3</span></td>
+                        <td>Larry</td>
+                        <td>Mark</td>
+                        <td>张三</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>
+                            <div class="btn-group btn-group-sm">
+                                <button type="button" class="btn btn-default"><a href="#">编辑</a></button>
+                                <button type="button" class="btn btn-default"><a href="#">删除</a></button>
+                                <div class="btn-group btn-group-sm">
+                                    <button type="button" class="btn btn-default dropdown-toggle btn-info" data-toggle="dropdown"> 更多 <span class="caret"></span></button>
+                                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                        <li><a href="#">启用</a></li>
+                                        <li><a href="#">禁用</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="tableRecordSelected"></td>
+                        <td><span class="badge">4</span></td>
+                        <td>Jacob</td>
+                        <td>Mark</td>
+                        <td>张三</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>
+                            <div class="btn-group btn-group-sm">
+                                <button type="button" class="btn btn-default"><a href="#">编辑</a></button>
+                                <button type="button" class="btn btn-default"><a href="#">删除</a></button>
+                                <div class="btn-group btn-group-sm">
+                                    <button type="button" class="btn btn-default dropdown-toggle btn-info" data-toggle="dropdown"> 更多 <span class="caret"></span></button>
+                                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                        <li><a href="#">启用</a></li>
+                                        <li><a href="#">禁用</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="tableRecordSelected"></td>
+                        <td><span class="badge">5</span></td>
+                        <td>Larry</td>
+                        <td>Mark</td>
+                        <td>张三</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>
+                            <div class="btn-group btn-group-sm">
+                                <button type="button" class="btn btn-default"><a href="#">编辑</a></button>
+                                <button type="button" class="btn btn-default"><a href="#">删除</a></button>
+                                <div class="btn-group btn-group-sm">
+                                    <button type="button" class="btn btn-default dropdown-toggle btn-info" data-toggle="dropdown"> 更多 <span class="caret"></span></button>
+                                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                        <li><a href="#">启用</a></li>
+                                        <li><a href="#">禁用</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="text-center">
+                <ul class="pagination">
+                    <li class="disabled"><a href="#">首页</a></li>
+                    <li class="disabled"><a href="#">上一页</a></li>
+                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">下一页</a></li>
+                    <li><a href="#">尾页</a></li>
+                    <li class="disabled"><a href="#">共 20 页,总计 1000 条记录</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<hr>
+<footer id="footer">
+    <p>  &nbsp;&nbsp;&nbsp;&nbsp;© 2014 <a href="#" target="_blank">localhost</a>&nbsp;&nbsp;&nbsp;网站技术： <a href="http://getbootstrap.com/" target="_blank" title="Bootstrap官网">Bootstrap</a></p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="resources/js/html5shiv.js"></script>
+<script src="resources/js/respond.min.js"></script>
+<![endif]-->
+
+<script src="resources/js/jquery/jquery.1.10.2.js"></script>
+<script src="resources/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="resources/js/ie10-viewport-bug-workaround.js"></script>
+<script src="resources/js/nano.js"></script>
+<script src="resources/js/underscore-min.js"></script>
+<script src="resources/js/moment.min.js"></script>
+<script src="resources/js/string.min.js"></script>
+<script src="resources/js/app/index.js"></script>
+
+<!-- About Modal -->
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="aboutModalLabel">关于</h4>
+            </div>
+            <div class="modal-body">
+                <h4>标题1</h4>
+                <p>爱生活,爱开发,爱生活,爱开发,爱生活,爱开发,爱生活,爱开发,爱生活,爱开发,爱生活,爱开发,爱生活,爱开发,爱生活,爱开发,爱生活,爱...</p>
+
+                <h4>标题2</h4>
+                <p>爱生活,爱开发,爱生活,爱开发,爱生活,爱开发,爱生活,爱开发,爱生活,爱开发,爱生活,爱开发,爱生活,爱开发,爱生活,爱开发,爱生活,爱...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
