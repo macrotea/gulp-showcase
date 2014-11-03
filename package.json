@@ -13,5 +13,8 @@
     "livereload": "^0.3.4",
     "gulp-livereload": "^2.1.1",
     "express": "^4.10.1"
+  },
+  "devDependencies": {
+    "gulp-minify-css": "^0.3.11"
   }
 }
