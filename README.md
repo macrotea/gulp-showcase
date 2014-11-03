@@ -4,11 +4,13 @@
 
 - 简单的 Web 项目开发骨架
 - 基于 Bootstrap3 构建项目
+- 实践gulp的功能
 
 ## 运行 ##
 
-- git clone
-- 运行 index.html
+- npm install -g gulp
+- 编写gulpfile.js
+- 通过命令： gulp 运行
 
 ## 联系我 ##
 
