@@ -51,7 +51,7 @@ gulp.task('css', function () {
 gulp.task('images', function () {
     gulp.src(paths.images)
     .pipe(imagemin({optimizationLevel: 5}))
-    .pipe(gulp.dest('dist/img'));
+    .pipe(gulp.dest('stdist/img'));
 });
 
 gulp.task('sass', function () {
